@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class Lec01 {
 
     /**
-     * @param args the command line arguments
+     * probando
      */
     public static void main(String[] args) {
        Lec01 miObjeto = new Lec01();
