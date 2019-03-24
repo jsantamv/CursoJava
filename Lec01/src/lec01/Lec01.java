@@ -6,7 +6,7 @@
 package lec01;
 
 import java.util.Scanner;
-
+import Lec02.WhileExample;
 /**
  *
  * @author Lab06-PC01
@@ -17,6 +17,8 @@ public class Lec01 {
      * probando
      */
     public static void main(String[] args) {
+        
+       
        Lec01 miObjeto = new Lec01();
        
        miObjeto.Ejercicio1();
