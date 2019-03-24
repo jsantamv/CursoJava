@@ -2,8 +2,6 @@
  * Este es el metodo Prinicpal para el llamado de todas las clases
  */
 package lec01;
-
-
 import Lec02.WhileExample;
 
 /**
@@ -22,8 +20,8 @@ public class Lec01 {
         lec01.MetodoPrinpal();
         */
         
-        WhileExample miObjWhile = new WhileExample();
-        miObjWhile.Pricipal();
+        WhileExample miObj = new WhileExample();
+        miObj.Pricipal();
 
     }
 

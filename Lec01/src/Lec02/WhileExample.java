@@ -21,24 +21,53 @@ public class WhileExample {
     /**
      * ESTE METODO ES --PRIVADO-- SOLO SE PUEDE VER EN ESTA CLASE
      * [[WhileExample]] Ejercicio 4 La Escuela Escuela El Abecé requiere
-     * programa que permita leerel peso de Nniños, niños, determine : - Cuántos
+     * programa que permita leer el peso de Nniños, niños, determine : - Cuántos
      * niños pesan entre 20.00 y 30.00 kg. - Cuántos pesan entre 30.01 y 50.00
-     * kg . - Cuántos pesan más de 50.00 kg .
+     * kg . - Cuántos pesan más de 50.00 kg.
      */
     private void PesosNinos() {
         try {
             //variables
             Scanner sc = new Scanner(System.in);
             double peso = 0;
+            double muestra = 0;
+            double contador = 0;
+            double child2030 = 0;
+            double child3050 = 0;
+            double child50 = 0;
 
             //logica del programa        
-            System.out.println("Pesos de Ninios");
-            peso = sc.nextDouble();
-            
-            
-            
+            System.out.println("Digite la cantidad de la Muestra a analizar");
+            muestra = sc.nextDouble();
+
+            while (contador <= muestra) {
+
+                System.out.print("Digite el peso del Ninios: ");
+                peso = sc.nextDouble();
+
+                if (peso >= 20 && peso <= 30) {
+                    child2030++;
+                }
+
+                if (peso >= 30.01 && peso <= 50) {
+                    child3050++;
+                }
+
+                if (peso > 50) {
+                    child50++;                  
+                }
+
+                contador++;
+
+            }//fin del while
+
+            //los resultados
+            System.out.println("La Cantidad que esta entre 20 y 30 es: " + child2030);
+            System.out.println("La Cantidad que esta entre 30.01 y 50: " + child3050);
+            System.out.println("La Cantidad mayor que 50 es: " + child50);
+
         } catch (Exception ex) {
-            System.out.println("Error en Lec02.WhileExample.PesosNinos() "+ex.getMessage());
+            System.out.println("Error en Lec02.WhileExample.PesosNinos() " + ex.getMessage());
         }
 
     }
