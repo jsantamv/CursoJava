@@ -41,23 +41,24 @@ public class WhileExample {
             muestra = sc.nextDouble();
 
             while (contador <= muestra) {
-
+                contador++;
                 System.out.print("Digite el peso del Ninios: ");
                 peso = sc.nextDouble();
 
+                //Cuántos niños pesan entre 20.00 y 30.00 kg.
                 if (peso >= 20 && peso <= 30) {
                     child2030++;
                 }
 
+                //Cuántos pesan entre 30.01 y 50.00
                 if (peso >= 30.01 && peso <= 50) {
                     child3050++;
                 }
 
+                //Cuántos pesan más de 50.00 kg.
                 if (peso > 50) {
-                    child50++;                  
+                    child50++;
                 }
-
-                contador++;
 
             }//fin del while
 
