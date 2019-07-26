@@ -5,6 +5,8 @@
 package Lec02;
 
 import java.util.Scanner;
+import java.util.Arrays;
+import java.util.Collections;
 
 /**
  * Clase con los ejerccios de While
