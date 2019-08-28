@@ -8,23 +8,34 @@ package practicafinal;
 import javax.swing.JOptionPane;
 
 /**
- * Esta clase me lleva el control de los club 
- * que se van creando.
+ * Esta clase me lleva el control de los club que se van creando.
+ *
  * @author Susana Santamaria
  */
 public class ClubLeon {
 
     String Nombre;
     float Recolecta;
-
+    
     /**
-     * Constructor inicaliza 
-     * las propiedades
+     * Constructor inicaliza las propiedades
      */
     public ClubLeon() {
 
         this.Recolecta = 0;
-        this.Nombre = "";
+        this.Nombre = "";        
+    }
+
+    /**
+     * Constructor Sobrecardo por paramatro
+     * @param _nombre
+     * @param _recolecta 
+     */
+    public ClubLeon(String _nombre, float _recolecta) {
+
+        this.Nombre = _nombre;
+        this.Recolecta = _recolecta;
+
     }
 
 }

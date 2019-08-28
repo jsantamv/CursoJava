@@ -15,23 +15,29 @@ import javax.swing.JOptionPane;
  */
 public class PracticaFinal {
 
+    /* Varables Globales */
     static Integer MAX_CLUB = 2;
     static List<ClubLeon> clubList = new ArrayList();
 
     public static void main(String[] args) {
+        clubLeones();
 
+    }
+
+    //region Programa para CLUBES
+    public static void clubLeones() {
         /*PASO 1 CREAMOS LOS CLUBS */
         for (int i = 0; i < MAX_CLUB; i++) {
             ClubLeon miClub = new ClubLeon();
-            miClub.Nombre = asignarDato();
+            miClub.Nombre = asignarDato();            
             clubList.add(miClub);
         }
 
         //PASO 2 RECOLECTAMOS LOS DINEROS
         recolectarDinero(clubList);
 
-        //PASO 3 IMPRIMIMOS LOS RESULTADOS
-        imprimirResultados(clubList);
+//        //PASO 3 IMPRIMIMOS LOS RESULTADOS
+//        imprimirResultados(clubList);
     }
 
     private static String asignarDato() {
@@ -40,22 +46,27 @@ public class PracticaFinal {
     }
 
     private static String selecionarClub(List<ClubLeon> _club) {
-        String[] club = new String[_club.size()];
+        String[] clubs = new String[_club.size()];
         for (int i = 0; i < _club.size(); i++) {
-            club[i] = _club.get(i).Nombre;
+            clubs[i] = _club.get(i).Nombre;
         }
 
-        String resp = (String) JOptionPane.showInputDialog(null, "Selecione el Club para Recolecta", "Club de Leon", JOptionPane.DEFAULT_OPTION, null, club, club[0]);
+        String resp = (String) JOptionPane.showInputDialog(null, "Selecione el Club para Recolecta", "Club de Leon", JOptionPane.DEFAULT_OPTION, null, clubs, clubs[0]);
         return resp;
     }
 
     /**
      * RECOLECTAMOS LOS DINEROS
-     * @param _club 
+     *
+     * @param _club
      */
     private static void recolectarDinero(List<ClubLeon> _club) {
         ClubLeon nuevoClub = new ClubLeon();
+        
+        //Seleciono el club         
         String miclub = selecionarClub(_club);
+        
+        
         Integer posClub = 0;
         String salida = "X";
         String recuado = "";
@@ -91,6 +102,8 @@ public class PracticaFinal {
             }
 
         } while (resp == 0);
+        
+        imprimirResultados(clubList);
     }
 
     //AUXILIAR PARA VALIDAR SI ES NUMERICO UN DATO
@@ -113,5 +126,5 @@ public class PracticaFinal {
             System.out.println(dato);
         }
     }
-
+//endregion
 }
